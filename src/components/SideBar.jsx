@@ -20,15 +20,15 @@ const SideBar = () => {
         </section>
         <section className='flex flex-col text-gray-100 gap-8 '>
           <FontAwesomeIcon
-            className='text-xl hover:text-orangePeel'
+            className='text-xl hover:text-flamingo'
             icon={faHouseUser}
           />
           <FontAwesomeIcon
-            className='text-xl hover:text-orangePeel'
+            className='text-xl hover:text-flamingo'
             icon={faClipboardList}
           />
           <FontAwesomeIcon
-            className='text-xl hover:text-orangePeel'
+            className='text-xl hover:text-flamingo'
             icon={faBarsProgress}
           />
         </section>
@@ -36,7 +36,7 @@ const SideBar = () => {
       <section className='flex flex-col gap-5 mt-2'>
         <FontAwesomeIcon
           icon={faMessage}
-          className=' text-white text-xl hover:text-orangePeel'
+          className=' text-white text-xl hover:text-flamingo'
         />
         <img
           className='w-8 h-8 rounded-full  '

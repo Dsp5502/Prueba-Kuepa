@@ -19,7 +19,7 @@ const Home = () => {
           <CirlcleProgress />
           <BarProgress />
         </section>
-        <section className=''>
+        <section className='w-full flex'>
           <CalendarConnectios />
           <PlanToday />
         </section>

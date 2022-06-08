@@ -8,7 +8,7 @@ const CirlcleProgress = () => {
         <CircularProgressbar
           styles={buildStyles({
             textSize: '25px',
-            pathColor: 'orange',
+            pathColor: '#F26725',
             trailColor: '#d6d6d6',
             textColor: '#000',
             gradientWidth: '50%',
