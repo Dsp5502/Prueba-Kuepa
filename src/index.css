@@ -5,3 +5,30 @@
 body {
   margin: 0;
 }
+
+.letter-Gradient {
+  background: #93c5fd;
+  background: -webkit-linear-gradient(to right, #93c5fd, #6366f1);
+  background: linear-gradient(to right, #93c5fd, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.letter-Gradient-2 {
+  background: #99f6e4;
+  background: -webkit-linear-gradient(to right, #99f6e4, #0f766e);
+  background: linear-gradient(to right, #99f6e4, #0f766e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.letter-Gradient-3 {
+  background: #ec4899;
+  background: -webkit-linear-gradient(to right, #ec4899, #be185d);
+  background: linear-gradient(to right, #ec4899, #be185d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

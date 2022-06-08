@@ -12,9 +12,12 @@ const BarProgress = () => {
         </div>
         <ProgressBar
           width='50%'
-          height='15px'
+          height='12px'
           bgColor='#F26725'
           completed={50}
+          labelSize='10px'
+          transitionDuration='3s'
+          transitionTimingFunction='ease-in-out'
         />
         <div className='flex gap-x-5 my-2'>
           <p>Loads obtenidos</p>
@@ -22,11 +25,12 @@ const BarProgress = () => {
         </div>
         <ProgressBar
           width='50%'
-          height='15px'
+          height='12px'
           bgColor='#F26725'
           completed={50}
           transitionDuration='3s'
           transitionTimingFunction='ease-in-out'
+          labelSize='10px'
         />
       </div>
     </div>

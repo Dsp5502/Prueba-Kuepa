@@ -3,8 +3,8 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const CirlcleProgress = () => {
   return (
-    <div className='w-2/4 flex mt-5 '>
-      <div className='w-36 my-10 mx-2'>
+    <div className='w-2/4 flex mt-2 items-center '>
+      <div className='w-36  mx-2'>
         <CircularProgressbar
           styles={buildStyles({
             textSize: '25px',

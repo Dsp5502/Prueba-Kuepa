@@ -9,7 +9,7 @@ const Layout = () => {
       <div className='md:w-1/12 bg-ebony-clay px-5 py-10'>
         <SideBar />
       </div>
-      <div className='md:w-10/12 bg-white rounded-tl-3xl rounded-bl-3xl p-10 md:h-screen'>
+      <div className='md:w-10/12 bg-white rounded-tl-3xl rounded-bl-3xl p-6 md:h-screen'>
         <Home />
       </div>
       <div className='md:w-1/12 rounded-tl-3xl rounded-bl-3xl'>
