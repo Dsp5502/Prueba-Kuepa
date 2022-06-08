@@ -1,12 +1,32 @@
+import { useState, useEffect } from 'react';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import BarProgress from './BarProgress';
 import CalendarConnectios from './CalendarConnectios';
 import CirlcleProgress from './CirlcleProgress';
 import PlanToday from './PlanToday';
 
 const Home = () => {
+  const [clients, setClients] = useState([]);
+  console.log(clients);
+  const numberRandom = Math.floor(Math.random() * 100);
+  console.log(numberRandom);
+
+  useEffect(() => {
+    const getClientsAPI = async () => {
+      try {
+        const url = 'https://api.opendota.com/api/proPlayers?limit=10';
+        const res = await fetch(url);
+        const clients = await res.json();
+        setClients(clients.slice(0, 5));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    getClientsAPI();
+  }, []);
+
   return (
     <div>
       <nav className='w-full flex justify-between items-center mx-2'>
@@ -28,7 +48,7 @@ const Home = () => {
           <BarProgress />
         </section>
         <section className='w-full flex'>
-          <CalendarConnectios />
+          <CalendarConnectios clients={clients} />
           <PlanToday />
         </section>
       </main>

@@ -32,3 +32,24 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+.color1 {
+  border-left: 3px solid #b082f6;
+  margin-bottom: 1px;
+}
+.color2 {
+  border-left: 3px solid #067d93;
+  margin-bottom: 1px;
+}
+.color3 {
+  border-left: 3px solid #b34793;
+  margin-bottom: 1px;
+}
+.color4 {
+  border-left: 3px solid #b181f6;
+  margin-bottom: 1px;
+}
+.color5 {
+  border-left: 3px solid #b34792;
+  margin-bottom: 1px;
+}
