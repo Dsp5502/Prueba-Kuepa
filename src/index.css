@@ -53,3 +53,7 @@ body {
   border-left: 3px solid #b34792;
   margin-bottom: 1px;
 }
+
+.textSmall {
+  font-size: 8px;
+}
