@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BarProgress from './BarProgress';
@@ -8,24 +7,7 @@ import PlanToday from './PlanToday';
 import { getDate } from '../helpers';
 import { Cont } from '../constants';
 
-const Home = () => {
-  const [clients, setClients] = useState([]);
-
-  useEffect(() => {
-    const getClientsAPI = async () => {
-      try {
-        const url = 'https://api.opendota.com/api/proPlayers?limit=10';
-        const res = await fetch(url);
-        const clients = await res.json();
-        setClients(clients);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    getClientsAPI();
-  }, []);
-
+const Home = ({ clients }) => {
   return (
     <div>
       <nav className='w-full flex justify-between items-center mx-2'>
