@@ -17,7 +17,7 @@ const Layout = ({ setGetclients, setGetMessageId }) => {
         setClients(clients);
         setGetclients(clients);
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     };
 

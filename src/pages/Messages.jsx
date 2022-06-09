@@ -7,7 +7,6 @@ import { formatearFecha } from '../helpers';
 
 const Messages = ({ getMessageId, getclients, setGetMessageId }) => {
   const [client, setClient] = useState({});
-  console.log(client);
 
   useEffect(() => {
     localStorage.setItem('messageId', getMessageId);
@@ -21,7 +20,7 @@ const Messages = ({ getMessageId, getclients, setGetMessageId }) => {
         const { profile } = await res.json();
         setClient(profile);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
 
       // setCargando(!cargando);

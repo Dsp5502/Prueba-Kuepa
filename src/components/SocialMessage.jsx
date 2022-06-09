@@ -11,7 +11,6 @@ const SocialMessage = ({ clients, setGetMessageId }) => {
   const clientsSocial = clients.slice(number - 6, number);
   const openMessage = (id) => {
     setGetMessageId(id);
-    console.log(id);
   };
   return (
     <div className='flex flex-wrap lg:flex-nowrap justify-between items-center hover:cursor-pointer'>
