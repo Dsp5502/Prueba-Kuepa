@@ -21,14 +21,14 @@ const Layout = () => {
     getClientsAPI();
   }, []);
   return (
-    <div className='md:flex md:min-h-screen '>
-      <div className='md:w-1/12 bg-ebony-clay px-5 py-10'>
+    <div className='  lg:flex lg:min-h-screen '>
+      <div className='lg:w-1/12 bg-ebony-clay px-5 py-10'>
         <SideBar />
       </div>
-      <div className='md:w-10/12 bg-white rounded-tl-3xl rounded-bl-3xl p-6 md:h-screen'>
+      <div className=' lg:w-11/12 bg-white rounded-tl-3xl rounded-bl-3xl p-6 md:h-screen'>
         <Home clients={clients} />
       </div>
-      <div className='md:w-1/12 rounded-tl-3xl rounded-bl-3xl '>
+      <div className='hidden  lg:block  lg:w-1/12 rounded-tl-3xl rounded-bl-3xl '>
         <Social clients={clients} />
       </div>
     </div>

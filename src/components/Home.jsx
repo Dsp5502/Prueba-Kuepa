@@ -31,11 +31,11 @@ const Home = ({ clients }) => {
       </nav>
       <h1 className='text-5xl mt-8  font-bold'>Hola, Jorge</h1>
       <main className='w-full flex flex-col '>
-        <section className='w-full flex  '>
+        <section className='w-full flex flex-col justify-center items-center  lg:flex-row '>
           <CirlcleProgress />
           <BarProgress />
         </section>
-        <section className='w-full flex'>
+        <section className='w-full flex flex-col lg:flex-row'>
           <CalendarConnectios clients={clients} />
           <PlanToday />
         </section>

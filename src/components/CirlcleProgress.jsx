@@ -3,7 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const CirlcleProgress = () => {
   return (
-    <div className='w-2/4 flex mt-2 items-center '>
+    <div className='w-full lg:w-2/4 flex mt-2 items-center '>
       <div className='w-36  mx-2'>
         <CircularProgressbar
           styles={buildStyles({
@@ -17,7 +17,7 @@ const CirlcleProgress = () => {
           text={`${50}%`}
         />
       </div>
-      <div className='w-full p-5 grid grid-cols-4 items-center gap-x-9 '>
+      <div className='w-full p-5 grid  sm:grid-cols-4 items-center gap-x-9 '>
         <p className='font-semibold'>Leads obtenidos</p>
         <p className='font-semibold text-xl'>50/100</p>
         <p className='font-semibold'>Cola de llamados</p>

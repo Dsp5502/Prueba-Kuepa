@@ -13,7 +13,7 @@ const CalendarConnectios = ({ clients }) => {
   const clientsView = clients.slice(number - 5, number);
 
   return (
-    <div className='w-2/4 flex flex-col mt-2   '>
+    <div className=' lg:w-2/4 flex flex-col mt-2   '>
       <h2 className='text-xl font-semibold px-5'>
         Conexiones de agenda para hoy
       </h2>

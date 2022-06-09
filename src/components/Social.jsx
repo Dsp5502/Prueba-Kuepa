@@ -10,7 +10,7 @@ const Social = ({ clients }) => {
   const number = getRandomInt(0, clients.length);
   const clientsSocial = clients.slice(number - 6, number);
   return (
-    <div className='   flex flex-col justify-between items-center hover:cursor-pointer'>
+    <div className='flex flex-wrap lg:flex-nowrap lg:flex-col justify-between items-center hover:cursor-pointer'>
       {clientsSocial.map((client) => (
         <div key={client.account_id} className=' w-20 h-20 rounded-lg my-2'>
           {client.plus ? (
