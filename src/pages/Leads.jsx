@@ -1,13 +1,13 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import BarProgress from './BarProgress';
-import CalendarConnectios from './CalendarConnectios';
-import CirlcleProgress from './CirlcleProgress';
-import PlanToday from './PlanToday';
+import BarProgress from '../components/BarProgress';
+import CalendarConnectios from '../components/CalendarConnectios';
+import CirlcleProgress from '../components/CirlcleProgress';
+import PlanToday from '../components/PlanToday';
 import { getDate } from '../helpers';
 import { Cont } from '../constants';
 
-const Home = ({ clients }) => {
+const Leads = ({ getclients }) => {
   return (
     <div>
       <nav className='w-full flex justify-between items-center mx-2'>
@@ -36,7 +36,7 @@ const Home = ({ clients }) => {
           <BarProgress />
         </section>
         <section className='w-full flex flex-col lg:flex-row'>
-          <CalendarConnectios clients={clients} />
+          <CalendarConnectios clients={getclients} />
           <PlanToday />
         </section>
       </main>
@@ -44,4 +44,4 @@ const Home = ({ clients }) => {
   );
 };
 
-export default Home;
+export default Leads;

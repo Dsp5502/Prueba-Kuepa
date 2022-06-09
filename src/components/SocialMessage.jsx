@@ -4,19 +4,17 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { getRandomInt } from '../helpers';
 
-const Social = ({ clients, setGetMessageId }) => {
-  const navigate = useNavigate();
+const SocialMessage = ({ clients, setGetMessageId }) => {
   const number = getRandomInt(0, clients.length);
   const clientsSocial = clients.slice(number - 6, number);
   const openMessage = (id) => {
     setGetMessageId(id);
-    navigate('/messages');
+    console.log(id);
   };
   return (
-    <div className='flex flex-wrap lg:flex-nowrap lg:flex-col justify-between items-center hover:cursor-pointer'>
+    <div className='flex flex-wrap lg:flex-nowrap justify-between items-center hover:cursor-pointer'>
       {clientsSocial.map((client) => (
         <div
           key={client.account_id}
@@ -49,4 +47,4 @@ const Social = ({ clients, setGetMessageId }) => {
   );
 };
 
-export default Social;
+export default SocialMessage;

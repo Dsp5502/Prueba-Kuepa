@@ -8,9 +8,12 @@ import {
   faMessage,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link, useLocation } from 'react-router-dom';
 
 const SideBar = () => {
   const [navActive, setNavActive] = useState(true);
+  const { pathname } = useLocation();
+
   return (
     <div className={`flex flex-col justify-between items-center h-full `}>
       <div className='lg:hidden w-full text-right'>
@@ -39,18 +42,36 @@ const SideBar = () => {
           />
         </section>
         <section className='flex flex-row lg:flex-col text-gray-100 gap-8 '>
-          <FontAwesomeIcon
-            className='text-xl hover:text-flamingo'
-            icon={faHouseUser}
-          />
-          <FontAwesomeIcon
-            className='text-xl hover:text-flamingo'
-            icon={faClipboardList}
-          />
-          <FontAwesomeIcon
-            className='text-xl hover:text-flamingo'
-            icon={faBarsProgress}
-          />
+          <Link className='text-center' to='/'>
+            <FontAwesomeIcon
+              className={`${
+                pathname === '/'
+                  ? 'text-flamingo border-b-2 border-flamingo pb-2'
+                  : 'text-white'
+              } text-xl hover:text-flamingo`}
+              icon={faHouseUser}
+            />
+          </Link>
+          <Link className='text-center' to='/leads'>
+            <FontAwesomeIcon
+              className={`${
+                pathname === '/leads'
+                  ? 'text-flamingo border-b-2 border-flamingo pb-2'
+                  : 'text-white'
+              } text-xl hover:text-flamingo`}
+              icon={faClipboardList}
+            />
+          </Link>
+          <Link className='text-center' to='/messages'>
+            <FontAwesomeIcon
+              className={`${
+                pathname === '/messages'
+                  ? 'text-flamingo border-b-2 border-flamingo pb-2'
+                  : 'text-white'
+              } text-xl hover:text-flamingo`}
+              icon={faBarsProgress}
+            />
+          </Link>
         </section>
       </div>
       <section

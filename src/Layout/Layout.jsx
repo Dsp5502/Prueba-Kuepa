@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import Home from '../components/Home';
+import { Outlet, useLocation } from 'react-router-dom';
+import Leads from '../pages/Leads';
 import SideBar from '../components/SideBar';
 import Social from '../components/Social';
 
-const Layout = () => {
+const Layout = ({ setGetclients, setGetMessageId }) => {
   const [clients, setClients] = useState([]);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const getClientsAPI = async () => {
@@ -13,6 +15,7 @@ const Layout = () => {
         const res = await fetch(url);
         const clients = await res.json();
         setClients(clients);
+        setGetclients(clients);
       } catch (err) {
         console.log(err);
       }
@@ -26,10 +29,14 @@ const Layout = () => {
         <SideBar />
       </div>
       <div className=' lg:w-11/12 bg-white rounded-tl-3xl rounded-bl-3xl p-6 md:h-screen'>
-        <Home clients={clients} />
+        <Outlet />
       </div>
-      <div className='hidden  lg:block  lg:w-1/12 rounded-tl-3xl rounded-bl-3xl '>
-        <Social clients={clients} />
+      <div
+        className={`hidden  ${
+          pathname !== '/leads' ? 'lg:hidden' : 'lg:block'
+        }   lg:w-1/12 rounded-tl-3xl rounded-bl-3xl `}
+      >
+        <Social clients={clients} setGetMessageId={setGetMessageId} />
       </div>
     </div>
   );
