@@ -1,26 +1,28 @@
+import React from 'react';
 import {
   faCircle,
   faMessage,
   faPhone,
-  faPlusCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import { getRandomInt } from '../helpers';
+import { colors } from '../constants';
 
 const CalendarConnectios = ({ clients }) => {
-  const colors = ['color1', 'color2', 'color3', 'color4', 'color5'];
+  const number = getRandomInt(0, clients.length);
+  const clientsView = clients.slice(number - 5, number);
 
   return (
     <div className='w-2/4 flex flex-col mt-2   '>
       <h2 className='text-xl font-semibold px-5'>
         Conexiones de agenda para hoy
       </h2>
-      {clients.map((client, index) => (
+      {clientsView.map((client, index) => (
         <div
           key={client.account_id}
           className={`w-full flex justify-between items-center ${colors[index]}`}
         >
-          <p className='w-40 text-sm px-2 '>{client.name}</p>
+          <p className='w-40 text-sm px-2 capitalize '>{client.name}</p>
           <div className='w-40  '>
             <p>Llamar</p>
             <p className='text-xs text-gray-500'>Descuento temporada</p>

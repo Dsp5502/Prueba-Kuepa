@@ -5,12 +5,11 @@ import BarProgress from './BarProgress';
 import CalendarConnectios from './CalendarConnectios';
 import CirlcleProgress from './CirlcleProgress';
 import PlanToday from './PlanToday';
+import { getDate } from '../helpers';
+import { Cont } from '../constants';
 
 const Home = () => {
   const [clients, setClients] = useState([]);
-  console.log(clients);
-  const numberRandom = Math.floor(Math.random() * 100);
-  console.log(numberRandom);
 
   useEffect(() => {
     const getClientsAPI = async () => {
@@ -18,7 +17,7 @@ const Home = () => {
         const url = 'https://api.opendota.com/api/proPlayers?limit=10';
         const res = await fetch(url);
         const clients = await res.json();
-        setClients(clients.slice(0, 5));
+        setClients(clients);
       } catch (err) {
         console.log(err);
       }
@@ -37,8 +36,15 @@ const Home = () => {
           />
           <input type='text' placeholder='Search..' />
         </div>
-        <select>
-          <option value=''>-- Seleccione --</option>
+        <select className='bg-white'>
+          {Cont.map(
+            (item, index) =>
+              Cont[index] !== Cont.length && (
+                <option key={index} value=''>
+                  {getDate(index)}
+                </option>
+              )
+          )}
         </select>
       </nav>
       <h1 className='text-5xl mt-8  font-bold'>Hola, Jorge</h1>
